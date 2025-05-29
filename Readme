@@ -11,31 +11,23 @@ A simple SMTP API service that provides email sending capabilities via REST API.
 ### Develompent
 
  1. Clone Github repository
-  ```
-    git clone [text](https://github.com/tantojos4/smtpapi-go.git)
-  ```
+  ```git clone [text](https://github.com/tantojos4/smtpapi-go.git)```
    ** make sure golang installing your computer
 2. Installing Dependencies
-    ```
-       go mod tidy
-    ```
+    ```go mod tidy```
 3. Run Development
-    ```
-    go run main.go
-    ```
+    ```go run main.go```
 4. Request true no validation error
-    ```
-    curl -X POST http://localhost:8080/send-email \
+    ```curl -X POST http://localhost:8080/send-email \
   -H "Content-Type: application/json" \
   -d '{
     "to": "recipient@example.com",
     "from": "sender@example.com",
     "subject": "Test Email",
     "body": "This is a test email"
-  }' ```
+  }'```
 5. Request false 
-  ```
-    curl -X POST http://localhost:8080/send-email \
+  ```curl -X POST http://localhost:8080/send-email \
   -H "Content-Type: application/json" \
   -d '{
     "to": "bukan-email",
